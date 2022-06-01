@@ -41,7 +41,11 @@ Navigate to https://developer.webex.com/ and after creating a new account, creat
 
 ## Adding features to the bot:
 
-Since the focus of this project is "automating" bot deployment, I have added a few basic features to my Webex bot. It can create a room, post a file, display basic information about the participants in a space, post a joke (used icanhazdadjokes API), delete a message, echo a message etc.
+Since the focus of this project is "automating" bot deployment, I have added a few basic features to my Webex bot. 
+Use case 1: Using Native Cisco APIs: It can create a room, post a file, display basic information about the participants in a space, delete a message, echo a message etc.
+Use case 2: Post a joke (used icanhazdadjokes API), you can also use any other random API on the Internet, e.g. weather API.
+Use case 3: Integrating with a third-party Cloud Data Loss Prevention tool (Nightfall AI). Nightfall detects sensitive data in SaaS applications.
+
 The code for programming the bot is in Node JS 14.0. These are a few basic features; you can add more features in the "webex_features.js" file located in the "features" folder.
 
 ## Creating a Custom Skill using Alexa Skills Kit:
@@ -158,13 +162,21 @@ Once the bot is up on Heroku, you can test your bot on Webex.
 
 Log in to Webex and test to see if your bot works.
 
+## Use case 1: Create a room in Webex:
+
+Ask your bot to create a room:
+
+<img src="images/Create_Room.PNG">
+
+A new room titled "botkit test room" will be created and it would display a message that it has created a room. You can chat with the bot by tagging it.
+
+## Use case 2: Integrating with a random API:
+
 Ask your bot to tell a joke:
 
 <img src="images/Joke.PNG">
 
-Next, ask your bot to create a room and it should create a new room titled "botkit test room" and display a message that it has created a room:
-
-<img src="images/Create_Room.PNG">
+## Use case 3: Third-party Enterprise-grade DLP integration:
  
-
+Create an account on https://app.nightfall.ai/ . On the left, there is a list of pre-built set of Machine learning detectors. Create a new Detection Rule, I have added "Credit Card Detector" in my detection rule. Attach this detection rule to a new policy and enter an email address where you'd like your alerts to be sent. Nightfall will use the PolicyUUID to scan data that is being sent in Webex. If the policy is violated, an alert would be sent to your email address.
 
