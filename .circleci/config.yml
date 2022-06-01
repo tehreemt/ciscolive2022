@@ -1,0 +1,47 @@
+version: 2
+jobs:
+  build:
+    machine:
+      image: ubuntu-2004:202201-02
+
+    working_directory: ~/alexa_webex_bot
+
+    steps:
+      - checkout        
+    
+
+      - restore_cache:
+          keys:
+            - v1-{{ .Branch }}
+          paths:
+            - /caches/app.tar
+
+      - run:
+      
+         name: Build Docker image
+         command: docker build --cache-from=app -t tehreemt/alexa_webex_bot/webex_bot .
+         
+      
+      - run:
+          name: Push to DockerHub
+          command: |
+            docker images
+            docker logout
+            docker login -u $DOCKERHUB_LOGIN -p $DOCKERHUB_PASSWORD 
+            docker tag tehreemt/alexa_webex_bot/webex_bot:latest tehreemt/dockerhub:myfirstimagepush
+            docker push tehreemt/dockerhub:myfirstimagepush
+            
+            
+      - run:
+          name: Deploy to Heroku
+          command: |
+             docker login --username=$HEROKU_LOGIN --password=$HEROKU_API_KEY registry.heroku.com
+             docker tag tehreemt/dockerhub:myfirstimagepush registry.heroku.com/$HEROKU_APP_NAME/web
+             docker push registry.heroku.com/$HEROKU_APP_NAME/web
+             
+             curl https://cli-assets.heroku.com/install.sh | sh
+             docker login --username=$HEROKU_EMAIL --password=$HEROKU_API_KEY registry.heroku.com
+             heroku container:push web --app alexa-webex-bot
+             heroku container:release web --app alexa-webex-bot
+
+    
