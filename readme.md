@@ -50,7 +50,7 @@ The code for programming the bot is in Node JS 14.0. These are a few basic featu
 
 ## Creating a Custom Skill using Alexa Skills Kit:
 
-Create a Custom Alexa Skill-Start from Scratch by navigating to https://developer.amazon.com/alexa/console/ask . Give your skill a name, I have named it "my lambda". This name will be used to command Alexa to invoke the custom skill.
+Create a Custom Alexa Skill-Start from Scratch by navigating to https://developer.amazon.com/alexa/console/ask . Give your skill a name, I have named it "cisco live". This name will be used to command Alexa to invoke the custom skill.
 
 <img src="images/CreateAlexaSkill.PNG">
 
