@@ -56,7 +56,7 @@ Create a Custom Alexa Skill-Start from Scratch by navigating to https://develope
 
 We'll also have to mention a few "Intents". These intents will define the skill's purpose when it is invoked and fulfill the corresponding intent. In my project, I have added an intent named "deployProject" and used three utterances- example, "deploy the bot", "deploy the project" and "project deployment". You can use any other phrase of your choice which you prefer to use.
 
-<img src="images/AlexaIntent.PNG">
+<img src="images/AlexaIntent.jpg">
 
 ## Tying your Alexa Skill to AWS Lambda:
 
