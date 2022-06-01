@@ -52,7 +52,7 @@ The code for programming the bot is in Node JS 14.0. These are a few basic featu
 
 Create a Custom Alexa Skill-Start from Scratch by navigating to https://developer.amazon.com/alexa/console/ask . Give your skill a name, I have named it "cisco live". This name will be used to command Alexa to invoke the custom skill.
 
-<img src="images/CreateAlexaSkill.JPG">
+<img src="images/CreateAlexaSkill.jpg">
 
 We'll also have to mention a few "Intents". These intents will define the skill's purpose when it is invoked and fulfill the corresponding intent. In my project, I have added an intent named "deployProject" and used three utterances- example, "deploy the bot", "deploy the project" and "project deployment". You can use any other phrase of your choice which you prefer to use.
 
