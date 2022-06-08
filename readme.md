@@ -131,7 +131,7 @@ After pushing the image, Heroku now requires you to release the image. Only push
 
 ## Testing if it works!
 
-Ask Alexa to deploy your project by using the voice command, "Alexa, ask cisco live to deploy the bot":
+Ask Alexa to deploy your project by using the voice command, "Alexa, ask cisco live to deploy my bot":
 
 <img src="images/Alexa_Command.jpg">
 
