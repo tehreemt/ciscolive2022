@@ -182,23 +182,23 @@ About Nightfall:
 Nightfall is a Cloud DLP(Data Loss Prevention) company, which discovers, classifies and protects data across any app. It uses Machine learning and AI to detect sensitive data - like PII, PHI, etc. It also lets you create your custom regexes. So lets get started! Create an account on https://app.nightfall.ai/ . You can create an API key by clicking on "Create a Key". Once we have our API key, all we need to do is, create a detection rule and attach it to our policy. In this example, I'll be creating a policy to detect a Credit Card number. 
 
 On the left, there is a list of pre-built set of Machine learning detectors. You can see the list of rules by navigating to "Detectors" section on the left. 
-<img src="images/NFDetectors.JPG"> 
+<img src="images/NFDetectors.jpg"> 
 
-We'll be using "Credit Card Detector" for this project. <img src="images/CreditCardDetector.JPG">
+We'll be using "Credit Card Detector" for this project. <img src="images/CreditCardDetector.jpg">
 
-To create a new Detection Rule, click on "Detection Rules". <img src="images/CreateDetectionRule.JPG">
+To create a new Detection Rule, click on "Detection Rules". <img src="images/CreateDetectionRule.jpg">
 Select "Credit Card Number" and name your detection rule. I have named it "Credit Card detection". 
 
 Attach this detection rule to a new policy and enter an email address where you'd like your alerts to be sent. Nightfall will use the PolicyUUID to scan data that is being sent in Webex. If the policy is violated, an alert would be sent to your email address. 
-<img src="images/CiscoLivePolicy.JPG">
+<img src="images/CiscoLivePolicy.jpg">
 
 Copy this policy's UUID and attach it to scanText() function specified in features/webex_features.js file. 
 
 Let us see if Nightfall detects a credit card in Webex:
 
 Post a credit card number in webex:
-<img src="images/CCWebex.JPG">
+<img src="images/CCWebex.jpg">
 
 If it was an actual credit card number, you'd receive an email alert from Nightfall which looks like:
-<img src="images/EmailNF.JPG">
+<img src="images/EmailNF.jpg">
 
