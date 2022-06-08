@@ -133,7 +133,7 @@ After pushing the image, Heroku now requires you to release the image. Only push
 
 Ask Alexa to deploy your project by using the voice command, "Alexa, ask cisco live to deploy the bot":
 
-<img src="images/Alexa_Command.PNG">
+<img src="images/Alexa_Command.jpg">
 
 If the above command did indeed trigger Lambda, Alexa would respond saying that the build was launched successfully. 
 
