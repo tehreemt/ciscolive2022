@@ -41,20 +41,23 @@ Navigate to https://developer.webex.com/ and after creating a new account, creat
 
 ## Adding features to the bot:
 
-Since the focus of this project is "automating" bot deployment, I have added a few basic features to my Webex bot. 
+Since the focus of this project is "automating" bot deployment, we have added a few basic features to our Webex bot. 
+
 Use case 1: Using Native Cisco APIs: It can create a room, post a file, display basic information about the participants in a space, delete a message, echo a message etc.
+
 Use case 2: Post a joke (used icanhazdadjokes API), you can also use any other random API on the Internet, e.g. weather API.
-Use case 3: Integrating with a third-party Cloud Data Loss Prevention tool (Nightfall AI). Nightfall detects sensitive data in SaaS applications.
+
+Use case 3: Integrating with a third-party Cloud Data Loss Prevention app (Nightfall AI). Nightfall detects sensitive data in SaaS applications.
 
 The code for programming the bot is in Node JS 14.0. These are a few basic features; you can add more features in the "webex_features.js" file located in the "features" folder.
 
 ## Creating a Custom Skill using Alexa Skills Kit:
 
-Create a Custom Alexa Skill-Start from Scratch by navigating to https://developer.amazon.com/alexa/console/ask . Give your skill a name, I have named it "cisco live". This name will be used to command Alexa to invoke the custom skill.
+Create a Custom Alexa Skill-Start from Scratch by navigating to https://developer.amazon.com/alexa/console/ask . Give your skill a name, we have named it "cisco live". This name will be used to command Alexa to invoke the custom skill.
 
 <img src="images/CreateAlexaSkill.jpg">
 
-We'll also have to mention a few "Intents". These intents will define the skill's purpose when it is invoked and fulfill the corresponding intent. In my project, I have added an intent named "deployProject" and used three utterances- example, "deploy the bot", "deploy the project" and "project deployment". You can use any other phrase of your choice which you prefer to use.
+We'll also have to mention a few "Intents". These intents will define the skill's purpose when it is invoked and fulfill the corresponding intent. In our project, we have added an intent named "deployment" and used four utterances- example, "deploy the bot", "deploy the project" , "deploy my bot" and "project deployment". You can use any other phrase of your choice which you prefer to use. Any of these utterances will trigger the bot deployment workflow.
 
 <img src="images/AlexaIntent.jpg">
 
@@ -65,7 +68,7 @@ Once the Lambda function is created, make sure to add Alexa Skills Trigger as th
 
 <img src="images/Endpoint_Alexa.PNG">
 
-Similarly, in AWS Lambda function, under "Configuration", add your Skills ID and link the function to your skill as shown below.
+In AWS Lambda function, under "Configuration", add your Skills ID and link the function to your skill as shown below.
 
 <img src="images/Lambda_Config.PNG">
 
@@ -128,11 +131,13 @@ After pushing the image, Heroku now requires you to release the image. Only push
 
 ## Testing if it works!
 
-Ask Alexa to deploy your project by using the voice command of your choice:
+Ask Alexa to deploy your project by using the voice command, "Alexa, ask cisco live to deploy the bot":
 
 <img src="images/Alexa_Command.PNG">
 
-The lambda function is triggered, and the latest code is pushed on the CI/CD pipeline, the status of the build should be successful.
+If the above command did indeed trigger Lambda, Alexa would respond saying that the build was launched successfully. 
+
+Once the lambda function is triggered, and the latest code is pushed on the CI/CD pipeline, the status of the build should be successful.
 
 The build section shows the status that the image was built successfully.
 
@@ -168,7 +173,7 @@ Ask your bot to create a room:
 
 <img src="images/Create_Room.PNG">
 
-A new room titled "botkit test room" will be created and it would display a message that it has created a room. You can chat with the bot by tagging it.
+A new room titled "Cisco Live 2022 room" will be created and it would display a message that it has created a room. You can chat with the bot by tagging it.
 
 ## Use case 2: Integrating with a random API:
 
