@@ -171,7 +171,7 @@ Log in to Webex and test to see if your bot works.
 
 Ask your bot to create a room:
 
-<img src="images/Create_Room.PNG">
+<img src="images/Create_Room.jpg">
 
 A new room titled "Cisco Live 2022 room" will be created and it would display a message that it has created a room. You can chat with the bot by tagging it.
 
@@ -179,7 +179,7 @@ A new room titled "Cisco Live 2022 room" will be created and it would display a 
 
 Ask your bot to tell a joke:
 
-<img src="images/Joke.PNG">
+<img src="images/Joke.jpg">
 
 ## Use case 3: Third-party Enterprise-grade DLP integration:
  
