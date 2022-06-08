@@ -67,7 +67,7 @@ module.exports = function(controller) {
         
     });
 	
-controller.hears('Credit card','message,direct_message', async(bot, message) => {
+controller.on('message,direct_message', async(bot, message) => {
 	  
 	let p = `${ message.text }`;
 	const options = {
